@@ -1,0 +1,174 @@
+body{
+    font-family: sans-serif;
+    background-color:lightgray;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1%;
+}
+.itemsdiv{
+    box-shadow: 1px 0px 5px black;
+    background-color: white;
+    width: 55%;
+    padding: 10px;
+    border-radius: 15px;
+    overflow-y: scroll;
+    height: 545px;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+.todoHeading{
+    color: black;
+    text-align: center;
+    font-size: 30px;
+    border-radius: 15px;
+}
+.inputbtndiv{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 8%;
+}
+.inputbtndiv input{
+    width: 380px;
+    font-size:20px;
+    font-weight: bold;
+    border: none;
+    border: 2px solid black;
+    border-radius: 30px;
+    padding: 10px;
+    padding-left: 15px;
+    background-color: white;
+    color: black;
+}
+.inputbtndiv input:focus{
+   outline: none;
+}
+.inputbtndiv input::placeholder{
+    color: black;
+}
+.inputbtndiv input:focus::placeholder{
+   color:darkcyan;
+   padding-left: 7px;
+   transition: all 0.5s;
+}
+.btndiv{
+    display: flex;
+    gap: 10px;
+}
+.btndiv button{
+    border: none;
+    padding: 12px;
+    width: 130px;
+    font-size: 20px;
+    border-radius: 30px;
+    background: linear-gradient(to right, darkcyan 0%,darkcyan 82%);
+    color: white;
+    cursor: pointer;
+}
+.btndiv button:hover{
+    font-weight: bold;
+    transform: scale(1.03);
+}
+.listdiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#ul li{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background: rgb(243, 242, 242);
+    color: black;
+    list-style: none;
+    border-radius: 10px;
+    font-size: x-large;
+    font-weight: bold;
+    width: 95%;
+    padding: 15px;
+    margin-bottom: 2%;
+    margin-top: 3%;
+    margin-left: -2.5%;
+    overflow-x: scroll;
+}
+#ul li button{
+    border: none;
+    padding: 10px;
+    width: 125px;
+    font-size: 20px;
+    border-radius: 30px;
+    background: linear-gradient(to right,darkcyan 0%,darkcyan 82%);
+    color: white;
+    cursor: pointer;
+}
+#ul li button:hover{
+    font-weight: bold;
+    transform: scale(1.03);
+}
+#copyright{
+    color: white;
+    text-align: center;
+}
+/* edit input */
+#editInput::placeholder{
+    color: darkcyan;
+    font-weight: bold;
+    padding-left: 5px;
+    transition: all 0.5s;
+}
+
+/* RESPONSIVENESS START */
+@media (max-width:1024px) {
+    .itemsdiv{
+        width: 90%;
+        margin-top: 7%;
+    }
+}
+@media (max-width:770px){
+    .itemsdiv{
+        margin-top: 7%;
+    }
+    .inputbtndiv input{
+        margin-bottom: 3%;
+        width: 350px;
+    }
+    .btndiv button{
+        width: 150px;
+    }
+    #ul li{
+        width:100% ;
+        margin-left: -5.5%;
+    }
+}
+@media (max-width:430px){
+    .todoHeading{
+        font-size: 25px;
+    }
+    .inputbtndiv input{
+        margin-bottom: 5%;
+        width: 290px;
+    }
+    .btndiv button{
+        margin-bottom: 5%;
+     }
+    #ul li{
+        margin-left: -10%;
+        font-size: 15px;
+    }
+    #ul li button{
+        font-size: 15px;
+    }
+}
+@media(max-width:375px){
+    #ul li{
+        margin-left: -12%;
+    }
+}
+
+
